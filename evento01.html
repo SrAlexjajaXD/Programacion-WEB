@@ -1,0 +1,34 @@
+<!-- Plantilla genérica de documento html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Título del documento</title>
+        <script type="text/javascript" src="js/"></script>
+        <link rel="stylesheet" type="text/css" href="css/">
+    </head>    
+    <body>
+        <h1 id="titulo">Provando eventos ejemplo01</h1>
+        <button id="azul" type="button">Azul</button>
+        <button id="rojo" type="button">Rojo</button>
+        <button id="verde" type="button">Verde</button>
+        
+        <script>
+            let titulo=document.getElementById("titulo");
+            let bAzul=document.getElementById("azul");
+            let bRojo=document.getElementById("rojo");
+            let bVerde=document.getElementById("verde");
+
+            bAzul.addEventListener("click", ()=>{
+                titulo.style="color:blue";
+            });
+            bRojo.addEventListener("click", ()=>{
+                titulo.style="color:red";
+            });
+            bVerde.addEventListener("click", ()=>{
+                titulo.style="color:green";
+            });
+
+        </script>
+    </body>
+</html>

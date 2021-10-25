@@ -1,0 +1,136 @@
+html {
+    background: url(../imagenes/fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+body{
+    width: auto;
+    height: auto;
+    padding-inline: 0.9%;
+    color:#d1ccb7;
+    text-align: center;
+    font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#contenedor{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+#tarjetas{ 
+    box-shadow: 1px 1px 4px 1px black, -1px -1px 9px -5px #fdfeff;
+    border-radius: 20px;
+    font-size: 20px;
+    padding-inline: 20px;
+    transition: all 300ms;
+    position: relative;
+}
+img{
+    max-width: 500px;
+    max-height: 250px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    transition: all 300ms;
+    position: relative;
+}
+#tarjetas:hover{
+    transform: scale(0.95);
+    box-shadow: none;
+}
+#ejercicios{
+    margin-bottom: 0px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    justify-content: center;
+    gap: 20px;
+}
+#incisos{
+    width: auto;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 1px 1px 4px 1px black, -1px -1px 9px -5px #fdfeff;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+}
+#incisos1{
+    text-align: justify;
+    max-width: 800px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    justify-self: center;
+}
+input{
+    padding: 5px;
+    font-family: monospace;
+    padding-inline: 10px;
+    margin-top: 0px;
+    margin: 5px;
+    backdrop-filter: blur(10px);
+    color: #f0ebd8;
+    border-style:none;
+    width: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 2px 2px 5px 1px rgb(3, 3, 3), inset -2px -2px 5px 1px rgba(255, 255, 255, 0.1);
+}
+input[type='radio']{
+    margin-bottom: 20px;
+    box-shadow: none;
+}
+select{
+    background-color: rgba(255, 255, 255, 0.03);
+    color: #f0ebd8;
+    border-color: black;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+option{
+    background-color: rgba(78, 39, 151, 0.555);
+    backdrop-filter: blur(10px);
+    color: black;
+    overflow: hidden;
+}
+input[type=checkbox]{
+    box-shadow: none;
+    margin-bottom: 20px;
+    margin-top: 0px;
+    width: 15px;
+}
+#checks{
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+}
+form{
+    line-height: 27px;
+}
+button{
+    color: #F0EBD8;
+    height: 40px;
+    width: auto;
+    margin: 5px;
+    border-style: hidden;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 2px 2px 5px 1px black, -2px -2px 5px 1px #1D2D44;
+}
+button:focus{
+    box-shadow: inset 2px 2px 5px 1px rgb(3, 3, 3), inset -2px -2px 5px 1px rgba(255, 255, 255, 0.1);
+}
+a{
+    text-decoration: none;
+    color: #F0EBD8;
+}

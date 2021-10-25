@@ -1,0 +1,75 @@
+html {
+    background: url(../imagenes/fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+body{
+    text-align: center;
+    zoom: 1.7;
+}
+h1{
+    color: #f0ebd8;
+    font-family:Arial, Helvetica, sans-serif;
+    text-shadow:0px 5px 5px #2a2e3a;
+}
+#resultado{
+    font-family:monospace;
+    line-height: 60px;
+    border-radius: 10px;
+    margin-inline: 15px;
+    color: #c7c3b6;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 2px 2px 5px 1px rgb(3, 3, 3), inset -2px -2px 5px 1px rgba(255, 255, 255, 0.1);
+}
+input{
+    font-family: monospace;
+    padding: 3px;
+    padding-inline: 10px;
+    margin-top: 0px;
+    margin: 5px;
+    color: #f0ebd8;
+    border-style:none;
+    width: 73%;
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 2px 2px 5px 1px rgb(3, 3, 3), inset -2px -2px 5px 1px rgba(255, 255, 255, 0.1);
+}
+#cal{
+    padding-top: 1px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 1px 1px 4px 1px black, -1px -1px 9px -5px #fdfeff;
+    backdrop-filter: blur(10px);
+    height: auto;
+    min-width: 250px;
+    max-width: 250px;
+    margin-inline: auto;
+    border-radius: 10px;
+}
+#botones{
+    background-color: rgba(255, 255, 255, 0.0003);
+    min-width: 220px;
+    margin-inline: auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    box-shadow: none;
+    
+}
+button{
+    color: #F0EBD8;
+    height: 40px;
+    width: 80px;
+    margin: 5px;
+    border-style: hidden;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.03);
+    box-shadow: 2px 2px 5px 1px black, -2px -2px 5px 1px #1D2D44;
+}
+button:focus{
+    box-shadow: inset 2px 2px 5px 1px rgb(3, 3, 3), inset -2px -2px 5px 1px rgba(255, 255, 255, 0.1);
+}

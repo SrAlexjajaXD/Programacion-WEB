@@ -1,0 +1,43 @@
+<!-- Plantilla genérica de documento html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Automóvil</title>
+    </head>    
+    <body>
+        <h1 id="titulo">Automóvil</h1>
+        <img id="imagen" src="images/carOFF.png"><br>
+        <button id="bBajas" type="button">
+            Luces bajas
+        </button>
+        <button id="bAltas" type="button">
+            Luces altas
+        </button>
+        <button id="bApagar" type="button">
+            Apagado
+        </button>
+
+        <script>
+            let titulo = document.getElementById("titulo");
+            let bBajas = document.getElementById("bBajas");
+            let bAltas = document.getElementById("bAltas");
+            let Apagar = document.getElementById("bApagar");
+            let imagen = document.getElementById("imagen");
+
+            bBajas.addEventListener("click",()=>{
+                imagen.setAttribute("src", "images/carON.png");
+                titulo.textContent="Luces bajas";
+            });
+            bAltas.addEventListener("click",()=>{
+                imagen.setAttribute("src", "images/carAltas.jpg");
+                titulo.textContent="Luces altas";
+            });
+            bApagar.addEventListener("click",()=>{
+                imagen.setAttribute("src", "images/carOFF.png");
+                titulo.textContent="Luces Apagadas";
+            });
+        </script>
+        
+    </body>
+</html>

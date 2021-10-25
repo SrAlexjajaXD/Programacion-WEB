@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Funciones con ForOf</title>
+        <link rel="stylesheet" type="text/css" href="css/styleGeneral.css">
+        <script type="text/javascript" src="js/Tarea1.js"></script>
+    </head>    
+    <body>
+        <h1 id="t">Tarea 1: Funciones</h1>
+        <div id="ejercicios">
+            <div id="incisos">
+                <h2>Funcion "For Of" para obtener el promedio de los
+                    elementos de un arreglo</h2>
+                <input id="entrada" placeholder="Escribe un arreglo">
+                <button id="boton" onclick="mostrarResul(promedio('entrada'),'promedio');">Promedio</button>
+                <p id="promedio">Aqui se mostrara el resultado</p>
+            </div>
+            <div id="incisos">
+                <h2>Funcion "For Of" para obtener el valor maximo de los elementos
+                    de un arreglo</h2>
+                <input id="entrada1" placeholder="Escribe un arreglo">
+                <button id="boton" onclick="mostrarResul(maximo('entrada1'),'maximo');">Valor maximo</button>
+                <p id="maximo">Aqui se mostrara el resultado</p>
+            </div>
+            <div id="incisos">
+                <h2>Funcion flecha para obtener el numero mayor de dos valores</h2>
+                <input id="valor1" placeholder="Escribe un número">
+                <input id="valor2" placeholder="Escribe otro número">
+                <button id="boton" onclick="mostrarResul(mayor('valor2','valor1'),'mayor');">Obtener el mayor</button>
+                <p id="mayor">Aqui se mostrara el resultado</p>
+            </div>
+            <div id="incisos">
+                <h2>Funcion "For each" para mostrar un arreglo de personas</h2>
+                <input id="nombre" placeholder="Nombre de la persona">
+                <input id="procedencia" placeholder="Procedencia">
+                <button id="boton" onclick="mostrar('nombre','procedencia','arreglo');">Añadir objeto y mostrar arreglo</button>
+                <div id="arreglo">
+                    <p>Aqui se mostrar el resultado</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

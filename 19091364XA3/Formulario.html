@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/styleGeneral.css">
+        <title>Formulario</title>
+    </head>
+    <body>
+        <div id="ejercicios">
+            <div id="incisos">
+                <h1>
+                    Formulario
+                </h1>
+                <form action="php/form.php" method="post" id="form" name="form">
+                        
+                    <label for="nombre">Nombre(s)</label><br>
+                    <input type="text" name="Nombre" id="nombre"><br>
+                    <label for="pA">Primer apellido</label><br>
+                    <input type="text" name="Pa" id="pA"><br>
+                    <label for="sA">Segundo apellido</label><br>
+                    <input type="text" name="Sa" id="sA"><br>
+    
+                    <label>Género</label><br>
+                    <input type="radio" name="sexo" value="Masculino" id="radius1">
+                    <label for="radius1">Masculino</label>
+                    <input type="radio" name="sexo" value="Femenino" id="radius2">
+                    <label for="radius2">Femenino</label>
+                    <input type="radio" name="sexo" value="Otro" id="radius3">
+                    <label for="radius3">Otro</label><br>
+    
+                    <label>Fecha de nacimiento</label><br>
+                    <label>Día</label>
+                    <select name="dia">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <label>Mes</label>
+                    <select name="mes">
+                        <option value="Enero">Enero</option>
+                        <option value="Febrero">Febrero</option>
+                        <option value="Marzo">Marzo</option>
+                        <option value="Abril">Abril</option>
+                        <option value="Mayo">Mayo</option>
+                        <option value="Junio">Junio</option>
+                        <option value="Julio">Julio</option>
+                        <option value="Agosto">Agosto</option>
+                        <option value="Septiembre">Septiembre</option>
+                        <option value="Octubre">Octubre</option>
+                        <option value="Noviembre">Noviembre</option>
+                        <option value="Diciembre">Dicembre</option>
+                    </select>
+                    <label>Año</label>
+                    <input type="number" name="año" id="ano"><br>
+    
+                    <label>Municipio</label><br>
+                    <select name="municipio">
+                        <option value="Cuernavaca">Cuernavaca</option>
+                        <option value="Cuautla">Cuautla</option>
+                        <option value="Tepoztlan">Tepoztlan</option>
+                        <option value="Yautepec">Yautepec</option>
+                        <option value="Jiutepec">Jiutepec</option>
+                        <option value="Jonacatepec">Jonacatepec</option>
+                        <option value="Puente">Puente de Ixtla</option>
+                        <option value="Zacatepec">Zacatepec</option>
+                        <option value="Tlaltizapan">Tlaltizapan</option>
+                        <option value="Tlaquiltenango">Tlaquiltenango</option>
+                        <option value="Ayala">Ayala</option>
+                        <option value="Xochitepec">Xochitepec</option>
+                        <option value="Temixco">Temixco</option>
+                    </select><br>
+                    <label>Selecciona los dispositivos con los que cuentes
+                        en tu hogar
+                    </label><br>
+                    <section id="checks">
+                        <label for="laptop" id="lab">Laptop</label>
+                        <label for="tablet">Tablet</label>
+                        <label for="celular">Celular</label>
+                        <label for="compu">Computadora</label>
+                        <input type="checkbox" name="dispositivos[]" id="laptop" value="Laptop">
+                        <input type="checkbox" name="dispositivos[]" id="tablet" value="Tablet">
+                        <input type="checkbox" name="dispositivos[]" id="celular" value="Celular">
+                        <input type="checkbox" name="dispositivos[]" id="compu" value="Computadora">
+                    </section>
+                    <section id="botones">
+                        <button type="reset" style="width: 200px;">Borrar</button>
+                        <button type="submit" style="width: 200px;">Enviar</button>
+                    </section>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/valForm.js"></script>
+    </body>
+</html>

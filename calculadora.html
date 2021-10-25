@@ -1,0 +1,44 @@
+<!-- Plantilla genérica de documento html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora</title>
+    </head>    
+    <body>
+        <h1 id="resultado">Aqui veras el resultado</h1>
+        
+        <input id="valor1" placeholder="Dame un numero"><br>
+        <input id="valor2" placeholder="Dame otro numero"><br>
+
+        <button id="sumar">Sumar</button>
+        <button id="restar">Restar</button>
+        <button id="limpiar">Limpiar</button>
+
+        <script>
+            let resultado=document.getElementById("resultado");
+            let valor1=document.getElementById("valor1");
+            let valor2=document.getElementById("valor2");
+            let suma=document.getElementById("sumar");
+            let resta=document.getElementById("restar");
+            let limpia=document.getElementById("limpiar");
+
+            suma.addEventListener("click", ()=>{
+                let v1=parseFloat(valor1.value);
+                let v2=parseFloat(valor2.value);
+                let s=v1+v2;
+                resultado.textContent=s.toPrecision(5);
+            });
+            resta.addEventListener("click", ()=>{
+                let v1=parseFloat(valor1.value);
+                let v2=parseFloat(valor2.value);
+                let s=v1-v2;
+                resultado.textContent=s.toFixed(5);
+            });
+            limpia.addEventListener("click", ()=>{
+                valor1.value="";
+                valor2.value="";
+            });
+        </script>
+    </body>
+</html>

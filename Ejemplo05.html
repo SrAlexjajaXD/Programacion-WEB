@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="Formulario.css">
+        <meta charset="UTF-8">
+        <title>
+            Formularios
+        </title>
+    </head>
+    <body>
+        <h1>
+            Definiendo formularios
+        </h1>
+        <form action="recibe.php" method="POST">
+            <label for="nombre">Dame tu nombre</label>
+            <input id="nombre" type="text" name="Nombre"> <br> <br>
+            <label for="procedencia">De donde eres</label>
+            <input id="procedencia" type="text" name="Procedencia"> <br><br>
+            
+            <!--- Definicion de checkbox--->
+            <label>Tus gustos</label><br>
+            <input type="checkbox" name="Gusto[]" value="Deportes">
+            <label>Deportes</label> <br>
+            <input type="checkbox" name="Gusto[]" value="Nutricion"> 
+            <label>Nutricion</label><br>
+            <input type="checkbox" name="Gusto[]" value="Viajes">
+            <label>Viajes</label><br>
+            <input type="checkbox" name="Gusto[]" value="Amistades">
+            <label>Amistades</label><br><br>
+            
+            <label>Sexo</label><br>
+            <input type="radio" name="Sexo" value="Masculino">
+            <label>Masculino</label><br>
+            <input type="radio" name="Sexo" value="Femenino">
+            <label>Femenino</label><br>
+            <input type="radio" name="Sexo" value="Sin especificar">
+            <label>Sin especificar</label><br><br>
+            
+            <label>De que continente eres</label>
+            <select name="Continente">
+                <option value="America"> America</option>
+                <option value="Europa"> Europa</option>
+                <option value="Asia"> Asia</option>
+                <option value="Africa"> Africa</option>
+                <option value="Antartida"> Antartida</option>
+                
+            </select> <br><br>
+            
+            <label>Comentarios</label><br>
+            <textarea cols="40" rows="7" name="comentario"></textarea><br><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
+        </form>
+    </body>
+</html>

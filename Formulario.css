@@ -1,0 +1,7 @@
+button{
+    font-size: 25px; color: darkred; background-color: gray; border: 2px black solid; border-radius: 20px
+}
+
+button:hover{
+    font-size: 25px; color: green; background-color: gray; border: 2px black dotted; border-radius: 20px
+}
