@@ -16,7 +16,7 @@ $misDatos = array(
             array('nombre' => 'Yadiramentoladosor', 'apellido' => 'García', 'matricula' => '20443335')
             );
 
-$pdf = new FPDF('P','mm','A3');
+$pdf = new FPDF('P','mm','letter');
 $pdf->AddPage();
 $pdf->SetFont('Times','I',15);
 foreach($misDatos as $alumno){
