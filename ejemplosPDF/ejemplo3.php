@@ -1,4 +1,3 @@
-
 <?php
 function cUTF($cadena){
   return  iconv('utf-8', 'ISO-8859-1',$cadena);
