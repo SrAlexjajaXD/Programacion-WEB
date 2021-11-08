@@ -6,7 +6,7 @@ function cUTF($cadena){
 }
 
 
-$pdf = new PDF();
+$pdf = new PDF('P', 'mm', 'Letter');
  
 $pdf->AddPage();
 
@@ -40,6 +40,8 @@ try {
 $pdf->tablaHorizontal($miCabecera, $jugadores, 40,75);
 
 $pdf->Image('shark.png' , 85 ,10, 40 , 25,'PNG', '');
+
+$pdf->Image('../genQR/estaciones.png' ,165 ,229, 40 , 40,'PNG', '');
  
 $pdf->Output(); //Salida al navegador
 ?>

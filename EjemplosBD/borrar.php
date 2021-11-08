@@ -1,7 +1,7 @@
 <?php
-$usuario = "mint";
-$pass = "mint";
-$nombreBaseDeDatos = "basedatos";
+$usuario = "sharky";
+$pass = "lkpoaszxm2001";
+$nombreBaseDeDatos = "newbase";
 # Puede ser 127.0.0.1 o el nombre de tu equipo; o la IP de un servidor remoto
 $rutaServidor = "127.0.0.1";
 $puerto = "5432";
