@@ -7,7 +7,6 @@
      propiedad del usuario www-data lo cual se asegura con el 
      comando:
                   chown -R www-data:www-data *
-                  comentario de prueba
 -->
 
 <?php
