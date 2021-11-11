@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: white;
+    display: grid;
+    justify-content: center;
+
+}
+div{
+    background-color: blue;
+    width: auto;
+    text-align: center;
+    align-items: center;
+}
+nav div{
+    height: auto;
+    margin: auto;
+}
+nav{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+a{
+    color: white;
+}
