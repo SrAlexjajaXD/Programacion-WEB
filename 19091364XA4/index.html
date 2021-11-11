@@ -2,31 +2,29 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user=scaleble=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="css/estiloGeneral.css">
+
     </head>
     <body>
-        <div>
+        <form action="php/valida.php" method="POST">
             <h1>Inciar sesion</h1>
-            <div>
-                <p>Hola bienvenido!</p>
-                <?php
-                session_start();
-                if(!isset($_SESSION['usuario'])){
-                ?>
-                <form action="php/valida.php" method="POST">
-                <!-- <form action="consultar.php" method="POST"> -->
-                    <input id="nombre" type="text" name="nombre" placeholder="Nombre de usuario"><br>
-                    <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña"><br>
-                    <button type="submit">Ingresar</button>
-                </form>
-                <?php
-                }else{
-                    header("Location: home.php");
-                }
-                ?>
-                <a href="registrar">No tengo un usuario</a>
-            </div>
-        </div>
+            <p>Hola bienvenido!</p>
+            <?php
+            session_start();
+            if(!isset($_SESSION['usuario'])){
+            ?>
+        <!-- <form action="consultar.php" method="POST"> -->
+            <input id="nombre" type="text" name="nombre" placeholder="Nombre de usuario"><br>
+            <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña"><br>
+            <button type="submit">Ingresar</button><br>
+            <?php
+            }else{
+                header("Location: home.php");
+            }
+            ?>
+            <a href="registrar">No tengo un usuario</a>
+        </form>
     </body>
 </html>

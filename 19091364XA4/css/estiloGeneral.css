@@ -1,25 +1,114 @@
-body{
+body, html{
     background-color: black;
     color: white;
-    display: grid;
-    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    position: relative;
 
 }
-div{
+form{
     background-color: blue;
-    width: auto;
+    width: 250px;
+    height: 280px;
     text-align: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-nav div{
-    height: auto;
-    margin: auto;
+div{
+    align-items: stretch;
 }
-nav{
-    background-color: blue;
+#consultas{
+    display: none;
+    grid-area: titulo2;
+}
+label{
+    display: none;
+}
+label:hover{
+    cursor: pointer;
+    color: blueviolet;
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
     display: flex;
+}
+#perfil{
+    display: none;
+}
+#perfill{
+    display: block;
+    grid-area: titulo3;
+}
+#logo{
+    grid-area: titulo1;
+}
+/* .perfil ul{
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+} */
+.perfil{
+    position:absolute;
+    /* transform: translate(-40%,-60%); */
+    /* transform: scaleY(1%); */
+    top: -50%;
+    right: 5%;
+    opacity: 0;
+    background-color: blue;
+    transition: all 0.3s;
+}
+#perfil:checked ~ .perfil{
+    top: 5%;
+    opacity: 1;
+}
+#encabezado{
+    background-color: blue;
+    display: grid;
+    grid-template-areas:"titulo1 titulo2 titulo3"
+                        "uno dos tres";
     align-items: center;
+    justify-content: space-around;
 }
 a{
+    display: block;
     color: white;
+    padding: 15px 20px;
+}
+a:hover{
+    color: cadetblue;
+}
+
+
+@media (max-width:720px){
+    label{
+        display: block;
+    }
+    .menu{
+        grid-area: dos;
+        position:absolute;
+        top: -50%;
+        left: 50%;
+        /* transform: translate(-40%,-60%); */
+        /* transform: scaleY(1%); */
+        opacity: 1;
+        background-color: blue;
+        transition: all 0.3s;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    #consultas:checked ~ .menu{
+        grid-area: dos;
+        top: 5%;
+        opacity: 1;
+    }
+    /* .menu li{
+        border-top: 1px solid white;
+    } */
 }
