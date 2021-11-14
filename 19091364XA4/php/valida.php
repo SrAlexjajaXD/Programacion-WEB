@@ -34,10 +34,7 @@ function buscaUsuario($us,$pas){
      
     if (isset($username) && isset($pass) && buscaUsuario($username,$pass)!="NO") 
     {
-       
         $_SESSION['usuario']=$username;
-        
-       
         header ("Location: ../home.php");
     }
     else    

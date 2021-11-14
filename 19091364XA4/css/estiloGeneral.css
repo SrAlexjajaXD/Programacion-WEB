@@ -1,22 +1,45 @@
 body, html{
     background-color: black;
     color: white;
-
+    padding: 0px;
+    margin: 0px;
 }
-form{
-    background-color: blue;
-    width: 250px;
-    height: 280px;
+nav{
+    background-color: #1f3d6d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav .Titulos{
+    align-items: center;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+nav .menu{
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+nav div img{
+    width: 70px;
+}
+.semestre,
+.calificacion,
+.clave{
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 a{
+    padding: 15px;
     display: block;
     color: white;
+    text-decoration: none;
 }
 a:hover{
-    color: cadetblue;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width: 3px;
+    padding-bottom: 3px;
 }

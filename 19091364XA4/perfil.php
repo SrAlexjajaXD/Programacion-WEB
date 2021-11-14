@@ -12,6 +12,21 @@ session_start();
 if (isset($_SESSION['usuario'])){
 ?>
 <body>
+<nav>
+    <div class="Titulos">
+      <img src="imagenes/logoitzblanco.png" alt="">
+      <h1>Intituto Tecnologico de Zacatepec</h1>
+      <img src="imagenes/LogoTecnmBlanco.png" alt="">
+    </div>
+    <div class="menu">
+      <a href="materias.php">Materias</a>
+      <a href="profesores.php">Profesores</a>
+      <a href="cosos.php">Lista de costos</a>
+      <a href="perfil.php"><?php echo $_SESSION['usuario'];?></a>
+      <a href="php/cierra.php" id="cerrar">Cerrar sesión</a>
+    </div>
+  </nav>
+  <div class="contenido">
   <?php
   $pass = "lkpoaszxm2001";
   $usuario = "postgres";
@@ -44,6 +59,7 @@ if (isset($_SESSION['usuario'])){
       echo "Ocurrió un error con la base de datos: " . $e->getMessage();
   }
   ?>
+  </div>
 </body>
 <?php
 }
