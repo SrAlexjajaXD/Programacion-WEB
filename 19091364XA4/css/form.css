@@ -12,6 +12,7 @@ form{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 15px;
 }
 a{
     display: block;
@@ -19,4 +20,10 @@ a{
 }
 a:hover{
     color: cadetblue;
+}
+input{
+    margin-bottom: 15px;
+}
+button{
+    margin-bottom: 15px;
 }
