@@ -16,6 +16,7 @@
                 <a href="materias.php">Materias</a>
                 <a href="profesores.php">Profesores</a>
                 <a href="cosos.php">Lista de costos</a>
+                <a href="biblioteca.php">Biblioteca</a>
                 <?php
                 session_start();
                 if(isset($_SESSION['usuario'])){

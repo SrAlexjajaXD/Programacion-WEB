@@ -23,6 +23,7 @@ if (isset($_SESSION['usuario'])){
       <a href="materias.php">Materias</a>
       <a href="profesores.php">Profesores</a>
       <a href="cosos.php">Lista de costos</a>
+      <a href="biblioteca.php">Biblioteca</a>
       <a href="perfil.php"><?php echo $_SESSION['usuario'];?></a>
       <a href="php/cierra.php" id="cerrar">Cerrar sesión</a>
     </div>
