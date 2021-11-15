@@ -40,31 +40,38 @@ if (isset($_SESSION['usuario'])){
   </nav>
   <div class="contenido">
         <h1>Datos personales</h1>
-        <div class="top">
-          <img src="imagenes/perfilblue-01.png" alt="">
-          <div>
-            <h1><?php echo $est->nombre?></h1>
-            <h2><?php echo $est->usuario?></h2>
-            <h2><?php echo $est->control?></h2>
-            <p>#<?php echo $est->tipo?></p>
-          </div>
-        </div>
-        <div class="abajo">
-          <div>
-            <p>Direccion:</p><h3> <?php echo $est->direccion?></h3><br>
-            <p>Municipio:</p><h3> <?php echo $est->municipio?></h3><br>
-            <p>Estado:</p><h3> <?php echo $est->estado?></h3><br>
-            <p>CURP:</p><h3> <?php echo $est->curp?></h3><br>
-            <p>Edad:</p><h3> <?php echo $est->edad?></h3><br>
-          </div>
-          <div>
-            <p>Correo:</p><h3> <?php echo $est->correo?></h3><br>
-            <p>Numero:</p><h3> <?php echo $est->numero?></h3><br>
-            <p>Tipo de sangre:</p><h3> <?php echo $est->sangre?></h3><br>
-            <p>Contraseña:</p><h3> <?php echo $est->contrasena?></h3><br>
-          </div>
-        </div>
-        <a href="modifDatosp.php">Modificar datos</a>
+            <div class="top">
+            <img src="imagenes/perfilblue-01.png" alt="">
+            <div>
+                <form action="php/modificapersona.php" method="POST">
+                <input type="input" value="<?php echo $est->nombre;?>" name="nombre"><br>
+                <h2><?php echo $est->usuario?></h2>
+                <h2><?php echo $est->control?></h2>
+                <p>#<?php echo $est->tipo?></p>
+              </div>
+            </div>
+            <div class="abajo">
+              <div>
+                <p>Direccion:</p><input value='<?php echo $est->direccion?>' name='direccion'><br>
+                <p>Municipio:</p><input value='<?php echo $est->municipio?>'name='municipio'><br>
+                <p>Estado:</p><input value='<?php echo $est->estado?>'name='estado'><br>
+                <p>CURP:</p><input value='<?php echo $est->curp?>'name='curp'><br>
+                <p>Edad:</p><input value='<?php echo $est->edad?>'name='edad'><br>
+              </div>
+              <div>
+                <p>Correo:</p><input value='<?php echo $est->correo?>'name='correo'><br>
+                <p>Numero:</p><input value='<?php echo $est->numero?>'name='numero'><br>
+                <p>Tipo de sangre:</p><input value='<?php echo $est->sangre?>'name='sangre'><br>
+                <p>Contraseña:</p><?php echo $est->contrasena?></h3><br>
+              </div>
+            </div>
+            <div  class="botones">
+                <div>
+                    <a href="perfil.php">Cancelar</a>
+                    <button type="submit">Guardar cambios</button>
+                </div>
+            </div>
+        </form>
   </div>
 </body>
 <?php

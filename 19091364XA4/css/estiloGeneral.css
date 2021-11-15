@@ -5,10 +5,13 @@ body, html{
     margin: 0px;
 }
 nav{
-    background-color: #1f3d6d;
+    background-color: #132541;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position:fixed;
+    width: 100%;
+    top: 0px;
 }
 nav .Titulos{
     align-items: center;
@@ -24,9 +27,24 @@ nav .menu{
 nav div img{
     width: 70px;
 }
+.contenido{
+    margin-top: 160px;
+    padding-inline: 10%;
+}
+table{
+    width: 100%;
+}
 .semestre,
 .calificacion,
 .clave{
+    text-align: center;
+}
+.credencial{
+    padding: 15px;
+    background-color: #1f3d6d;
+    border-radius: 15px;
+}
+h1{
     text-align: center;
 }
 a{

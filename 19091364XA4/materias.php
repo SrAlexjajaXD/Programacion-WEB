@@ -28,6 +28,7 @@ if (isset($_SESSION['usuario'])){
     </div>
   </nav>
   <div class="contenido">
+    <h1>Boleta de calificaciones</h1>
   <?php
   $pass = "lkpoaszxm2001";
   $usuario = "postgres";
@@ -39,8 +40,16 @@ if (isset($_SESSION['usuario'])){
       $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
       $consulMat = $base_de_datos->query("select calificaciones.clave, materias.nombre, calificacion, semestre from calificaciones, materias where control='19091364' and calificaciones.clave=materias.clave");
       $materias = $consulMat->fetchAll(PDO::FETCH_OBJ);
-      
-      echo "<table class='tabla' width='100%'>";
+      $consulDat = $base_de_datos->query("select * from estudiantes, personas where personas.control='19091364'");
+      $datos = $consulDat->fetchAll(PDO::FETCH_OBJ);
+      foreach($datos as $dat){
+        echo "<p>Nombre: $dat->nombre</p>";
+        echo "<p>No. Control: $dat->control</p>";
+        echo "<p>Semestre: $dat->semestre</p>";
+        echo "<p>Carrera: $dat->carrera</p>";
+        echo "<p>Especialidad: $dat->especialidad</p>";
+      }
+      echo "<table class='tabla'>";
       echo "<tr>
       <th>Clave</th>
       <th>Materia</th>
