@@ -9,7 +9,7 @@ if (isset($_SESSION['usuario'])){
     try {
         $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
         $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-        $consulBibl = $base_de_datos->query("select personas.nombre, titulo, biblioteca.direccion, descripcion from biblioteca, personas");
+        $consulBibl = $base_de_datos->query("select id, personas.nombre, titulo, biblioteca.direccion, descripcion from biblioteca, personas");
         $biblioteca = $consulBibl->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
@@ -30,8 +30,8 @@ if (isset($_SESSION['usuario'])){
     </div>
     <div class="menu">
       <a href="materias.php">Materias</a>
-      <a href="profesores.php">Profesores</a>
-      <a href="cosos.php">Lista de costos</a>
+      <!-- <a href="profesores.php">Profesores</a> -->
+      <!-- <a href="cosos.php">Lista de costos</a> -->
       <a href="biblioteca.php">Biblioteca</a>
       <a href="perfil.php"><?php echo $_SESSION['usuario'];?></a>
       <a href="php/cierra.php" id="cerrar">Cerrar sesión</a>
@@ -50,9 +50,8 @@ if (isset($_SESSION['usuario'])){
     <input placeholder="Descripcion" name="descripcion">
     <button type="submit">Agregar</button>
     </form>
-    <div>
-    </div>
-  <?php
+    <form action="php/borrarbib.php" method="POST">
+      <?php
       echo "<table class='biblioteca'>";
       echo "<tr>
       <th>Compartido por</th>
@@ -62,17 +61,20 @@ if (isset($_SESSION['usuario'])){
       </tr>";
       foreach($biblioteca as $bib){
         echo "<tr>";
-        echo "<td>".$bib->nombre."</t>";
+        echo "<td><input class='cheack' type=checkbox name=check[] value=$bib->id>$bib->nombre</td>";
+        // echo "<td>".$bib->nombre."</td>";
         echo "<td>".$bib->titulo."</td>";
         echo "<td><a href='$bib->direccion'>$bib->direccion</a></td>";
-        echo "<td>".$bib->descripcion."</td>";
+        echo "<td class='desc'>".$bib->descripcion."</td>";
         echo "</tr>";
       }
       echo "</table>";
-  } catch (Exception $e) {
+    } catch (Exception $e) {
       echo "Ocurrió un error con la base de datos: " . $e->getMessage();
-  }
-  ?>
+    }
+    ?>
+    <button type="submit">Borrar seleccionados</button>
+    </form>
   </div>
 </body>
 </html>

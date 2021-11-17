@@ -13,7 +13,7 @@ $puerto = "5432";
 try {
     $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
     $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sentencia = $base_de_datos->prepare("insert into biblioteca values('19091364','$titulo','asdasd','asdasd')");
+    $sentencia = $base_de_datos->prepare("insert into biblioteca values(nextval('id'),'19091364','$titulo','$link','$descripcion')");
     if ($sentencia->execute())
        echo "Insercion exitoso !!";
     else

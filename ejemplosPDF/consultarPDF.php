@@ -24,14 +24,14 @@ $miCabecera = array('id','Nombre', 'Pais');
 
 $pass = "lkpoaszxm2001";
 $usuario = "postgres";
-$nombreBaseDeDatos = "newbase";
+$nombreBaseDeDatos = "tec";
 # Puede ser 127.0.0.1 o el nombre de tu equipo; o la IP de un servidor remoto
 $rutaServidor = "127.0.0.1";
 $puerto = "5432";//si fuera MySQL el puerto seria 3306
 try {
     $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
     $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-    $sentencia = $base_de_datos->query("select * from jugadores order by nombre");
+    $sentencia = $base_de_datos->query("select clave, calificacion from calificaciones order by calificacion");
     $jugadores = $sentencia->fetchAll(PDO::FETCH_OBJ);//arreglo de jugadores
     
 } catch (Exception $e) {

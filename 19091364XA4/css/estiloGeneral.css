@@ -29,10 +29,28 @@ nav div img{
 }
 .contenido{
     margin-top: 160px;
+    margin-bottom: 160px;
     padding-inline: 10%;
 }
 table{
+    margin-block: 50px;
     width: 100%;
+}
+.biblioteca{
+    width: auto;
+}
+.biblioteca td,th{
+    width:25%;
+}
+input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: #132541;
+    border-width: 3px;
+    background: none;
+    color: white;
+    margin-bottom: 20px;
 }
 .semestre,
 .calificacion,
@@ -43,6 +61,29 @@ table{
     padding: 15px;
     background-color: #1f3d6d;
     border-radius: 15px;
+}
+.biblioteca{
+    margin-top: 20px;
+    table-layout: fixed;
+}
+/* .biblioteca td{
+    background-color: #132541;
+    text-align: justify;
+    width: 25%;
+} */
+.biblioteca a{
+    padding:inherit;
+    color: white;
+    text-decoration: none;
+}
+.biblioteca a:hover{
+    border-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-width:inherit;
+    padding-bottom: inherit;
+    color: #132541;
 }
 h1{
     text-align: center;
@@ -60,4 +101,7 @@ a:hover{
     border-right: none;
     border-width: 3px;
     padding-bottom: 3px;
+}
+.cheack{
+    margin: 0px;
 }

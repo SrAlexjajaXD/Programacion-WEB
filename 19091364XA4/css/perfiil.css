@@ -28,6 +28,7 @@ nav div img{
     width: 70px;
 }
 .contenido{
+    margin-bottom: 160px;
     margin-top: 160px;
     padding-inline: 10%;
     display: grid;
