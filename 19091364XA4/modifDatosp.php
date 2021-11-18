@@ -54,7 +54,7 @@ if (isset($_SESSION['usuario'])){
             </div>
             <div class="abajo">
               <div>
-                <p>Direccion:</p><input value='<?php echo $est->direccion?>' name='direccion'><br>
+                <p>Dirección:</p><input value='<?php echo $est->direccion?>' name='direccion'><br>
                 <p>Municipio:</p><input value='<?php echo $est->municipio?>'name='municipio'><br>
                 <p>Estado:</p><input value='<?php echo $est->estado?>'name='estado'><br>
                 <p>CURP:</p><input value='<?php echo $est->curp?>'name='curp'><br>
@@ -62,9 +62,9 @@ if (isset($_SESSION['usuario'])){
               </div>
               <div>
                 <p>Correo:</p><input value='<?php echo $est->correo?>'name='correo'><br>
-                <p>Numero:</p><input value='<?php echo $est->numero?>'name='numero'><br>
+                <p>Número:</p><input value='<?php echo $est->numero?>'name='numero'><br>
                 <p>Tipo de sangre:</p><input value='<?php echo $est->sangre?>'name='sangre'><br>
-                <p>Contraseña:</p><?php echo $est->contrasena?></h3><br>
+                <!-- <p>Contraseña:</p><?php echo $est->contrasena?></h3><br> -->
               </div>
             </div>
             <div  class="botones">

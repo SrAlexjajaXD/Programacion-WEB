@@ -53,7 +53,7 @@ if (isset($_SESSION['usuario'])){
         </div>
         <div class="abajo">
           <div>
-            <p>Direccion:</p><h3> <?php echo $est->direccion?></h3><br>
+            <p>Dirección:</p><h3> <?php echo $est->direccion?></h3><br>
             <p>Municipio:</p><h3> <?php echo $est->municipio?></h3><br>
             <p>Estado:</p><h3> <?php echo $est->estado?></h3><br>
             <p>CURP:</p><h3> <?php echo $est->curp?></h3><br>
@@ -61,9 +61,9 @@ if (isset($_SESSION['usuario'])){
           </div>
           <div>
             <p>Correo:</p><h3> <?php echo $est->correo?></h3><br>
-            <p>Numero:</p><h3> <?php echo $est->numero?></h3><br>
+            <p>Número:</p><h3> <?php echo $est->numero?></h3><br>
             <p>Tipo de sangre:</p><h3> <?php echo $est->sangre?></h3><br>
-            <p>Contraseña:</p><h3> <?php echo $est->contrasena?></h3><br>
+            <!-- <p>Contraseña:</p><h3> <?php echo $est->contrasena?></h3><br> -->
           </div>
         </div>
         <a href="modifDatosp.php">Modificar datos</a>

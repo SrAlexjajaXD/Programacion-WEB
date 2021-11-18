@@ -38,16 +38,13 @@ if (isset($_SESSION['usuario'])){
     </div>
   </nav>
   <div class="contenido">
-    <h1>Bliblioteca digital</h1>
-    <p>Aqui podras añadir varios enlaces de los cuales obtuviste alguna informacion importante para poder compartilos con tus
-        profesores y compañeros del Tecnologico de zacatepec. Te recomendamos añadir una descrpcion breve para que nadie puierda
-        detalles del enlace que añadiste (cuentas con 260 caracteres para expresarte libremente). Tampoco olvides añadir un titulo 
-        bastante descriptivo.
+    <h1>Biblioteca digital</h1>
+    <p>Aquí podrás añadir varios enlaces de los cuales obtuviste alguna información importante para poder compartirlos con tus profesores y compañeros del Tecnológico de Zacatepec. Te recomendamos añadir una descripción breve para que nadie pierda detalles del enlace que añadiste (cuentas con 260 caracteres para expresarte libremente). Tampoco olvides añadir un título bastante descriptivo.
     </p>
     <form action="php/insertarBib.php" method="POST">
     <input placeholder="Titulo" name="titulo">
     <input placeholder="Link" name="link">
-    <input placeholder="Descripcion" name="descripcion">
+    <input placeholder="Descripción" name="descripcion">
     <button type="submit">Agregar</button>
     </form>
     <form action="php/borrarbib.php" method="POST">
@@ -57,7 +54,7 @@ if (isset($_SESSION['usuario'])){
       <th>Compartido por</th>
       <th>Titulo</th>
       <th>Enlace</th>
-      <th>Descripcion</th>
+      <th>Descripción</th>
       </tr>";
       foreach($biblioteca as $bib){
         echo "<tr>";
