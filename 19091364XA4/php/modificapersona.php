@@ -13,6 +13,8 @@ $numero=$_POST["numero"];
 $sangre=$_POST["sangre"];
 $contrasena=$_POST["contrasena"];
 
+$us=$_SESSION['usuario'];
+
 $usuario = "sharky";
 $pass = "lkpoaszxm2001";
 $nombreBaseDeDatos = "tec";
@@ -26,7 +28,7 @@ try {
                                          $pass);
     $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // $sentencia = $base_de_datos->prepare("update personas set nombre='$nombre',direccion='$direccion',municipio='$municipio',estado='$estado',curp='$curp',edad='$edad',correo='$correo',numero='$numero',sangre='$sangre',contrasena='$contrasena' where control='19091364'");
-    $sentencia = $base_de_datos->prepare("update personas set nombre='$nombre',direccion='$direccion',municipio='$municipio',estado='$estado',curp='$curp',edad='$edad',correo='$correo',numero='$numero',sangre='$sangre' where control='19091364'");
+    $sentencia = $base_de_datos->prepare("update personas set nombre='$nombre',direccion='$direccion',municipio='$municipio',estado='$estado',curp='$curp',edad='$edad',correo='$correo',numero='$numero',sangre='$sangre' where control='$us'");
     if ($sentencia->execute())
        echo "Modificacion exitosa !!";
     else

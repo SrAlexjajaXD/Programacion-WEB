@@ -34,7 +34,10 @@ function buscaUsuario($us,$pas){
      
     if (isset($username) && isset($pass) && buscaUsuario($username,$pass)!="NO") 
     {
-        $_SESSION['usuario']=$username;
+         foreach(buscaUsuario($username,$pass) as $c){
+            $_SESSION['usuario']=$c->control;
+         }
+         $_SESSION['name']=$username;
         header ("Location: ../home.php");
     }
     else    

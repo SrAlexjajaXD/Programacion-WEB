@@ -1,23 +1,34 @@
 body, html{
+    font-family:Arial, Helvetica, sans-serif;
     background-color: black;
-    color: white;
+    color: whitesmoke;
     padding: 0px;
     margin: 0px;
 }
 nav{
-    background-color: #132541;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     position:fixed;
     width: 100%;
     top: 0px;
+    /* box-shadow: inset 0px -25px 60px -30px #254880; */
 }
 nav .Titulos{
     align-items: center;
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
+}
+nav .Titulos a{
+    color: white;
+    margin: 0px;
+    border-bottom: none;
+    padding-bottom: none;
+}
+nav .Titulos a:hover{
+    padding-bottom: 15px;
 }
 nav .menu{
     display: inline-flex;
@@ -28,13 +39,28 @@ nav div img{
     width: 70px;
 }
 .contenido{
-    margin-top: 160px;
+    margin-top: 200px;
     margin-bottom: 160px;
     padding-inline: 10%;
 }
 table{
     margin-block: 50px;
     width: 100%;
+}
+table th{
+    padding-block: 8px;
+    background-color: #132541;
+}
+table tr{
+    background-color: #080f1a;
+}
+.pdf{
+    display: flex;
+    justify-content: center;
+}
+.pdf form{
+    display: grid;
+    justify-content: center;
 }
 .biblioteca{
     width: auto;
@@ -85,6 +111,9 @@ input{
     padding-bottom: inherit;
     color: #132541;
 }
+p{
+    text-align: justify;
+}
 h1{
     text-align: center;
 }
@@ -95,6 +124,7 @@ a{
     text-decoration: none;
 }
 a:hover{
+    color: #132541;
     border-style: solid;
     border-top: none;
     border-left: none;
@@ -104,4 +134,19 @@ a:hover{
 }
 .cheack{
     margin: 0px;
+}
+select{
+    color: whitesmoke;
+    background-color: #132541;
+    border-color: #080f1a;
+}
+button{
+    color: whitesmoke;
+    background-color: #132541;
+    border-color: #080f1a;
+    padding-block: 7px;
+}
+form{
+    display: grid;
+    margin-bottom: 5%;
 }

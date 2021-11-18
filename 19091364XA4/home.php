@@ -8,7 +8,7 @@
     <body>
         <nav>
             <div class="Titulos">
-                <img src="imagenes/logoitzblanco.png" alt="">
+            <a href="home.php" name="home"><img src="imagenes/logoitzblanco.png" alt=""></a>
                 <h1>Intituto Tecnologico de Zacatepec</h1>
                 <img src="imagenes/LogoTecnmBlanco.png" alt="">
             </div>
@@ -21,7 +21,7 @@
                 session_start();
                 if(isset($_SESSION['usuario'])){
                 ?>
-                <a href="perfil.php"><?php echo $_SESSION['usuario'];?></a>
+                <a href="perfil.php"><?php echo $_SESSION['name'];?></a>
                 <a href="php/cierra.php" id="cerrar">Cerrar sesión</a>
                 <?php
                 }else

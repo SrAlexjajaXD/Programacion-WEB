@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['usuario'])){
     $pass = "lkpoaszxm2001";
-    $usuario = "postgres";
+    $usuario = "sharky";
     $nombreBaseDeDatos = "tec";
     $rutaServidor = "127.0.0.1";
     $puerto = "5432";
@@ -24,7 +24,7 @@ if (isset($_SESSION['usuario'])){
 <body>
   <nav>
     <div class="Titulos">
-      <img src="imagenes/logoitzblanco.png" alt="">
+      <a href="home.php"><img src="imagenes/logoitzblanco.png" alt=""></a>
       <h1>Intituto Tecnologico de Zacatepec</h1>
       <img src="imagenes/LogoTecnmBlanco.png" alt="">
     </div>
@@ -33,7 +33,7 @@ if (isset($_SESSION['usuario'])){
       <!-- <a href="profesores.php">Profesores</a> -->
       <!-- <a href="cosos.php">Lista de costos</a> -->
       <a href="biblioteca.php">Biblioteca</a>
-      <a href="perfil.php"><?php echo $_SESSION['usuario'];?></a>
+      <a href="perfil.php"><?php echo $_SESSION['name'];?></a>
       <a href="php/cierra.php" id="cerrar">Cerrar sesión</a>
     </div>
   </nav>

@@ -9,7 +9,8 @@
     </head>
     <body>
         <form action="php/valida.php" method="POST">
-            <h1>Inciar sesion</h1>
+            <img src="imagenes/logoitzblanco.png">
+            <h1>Iniciar sesión</h1>
             <p>Hola bienvenido!</p>
             <?php
             session_start();
@@ -24,7 +25,6 @@
                 header("Location: home.php");
             }
             ?>
-            <a href="registrar">No tengo un usuario</a>
         </form>
     </body>
 </html>

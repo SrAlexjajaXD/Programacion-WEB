@@ -11,22 +11,23 @@
 session_start();
 if (isset($_SESSION['usuario'])){
   $pass = "lkpoaszxm2001";
-  $usuario = "postgres";
+  $usuario = "sharky";
   $nombreBaseDeDatos = "tec";
   # Puede ser 127.0.0.1 o el nombre de tu equipo; o la IP de un servidor remoto
   $rutaServidor = "127.0.0.1";
   $puerto = "5432";//si fuera MySQL el puerto seria 3306
+  $us=$_SESSION['usuario'];
   try {
       $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
       $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-      $sentencia = $base_de_datos->query("select * from estudiantes, personas where estudiantes.control='19091364'");
+      $sentencia = $base_de_datos->query("select * from estudiantes, personas where estudiantes.control='$us'");
       $estudiantes = $sentencia->fetchAll(PDO::FETCH_OBJ);//arreglo de jugadores
       foreach($estudiantes as $est){
 ?>
 <body>
 <nav>
     <div class="Titulos">
-      <img src="imagenes/logoitzblanco.png" alt="">
+    <a href="home.php"><img src="imagenes/logoitzblanco.png" alt=""></a>
       <h1>Intituto Tecnologico de Zacatepec</h1>
       <img src="imagenes/LogoTecnmBlanco.png" alt="">
     </div>
@@ -35,7 +36,7 @@ if (isset($_SESSION['usuario'])){
       <!-- <a href="profesores.php">Profesores</a>
       <a href="cosos.php">Lista de costos</a> -->
       <a href="biblioteca.php">Biblioteca</a>
-      <a href="perfil.php"><?php echo $_SESSION['usuario'];?></a>
+      <a href="perfil.php"><?php echo $_SESSION['name'];?></a>
       <a href="php/cierra.php" id="cerrar">Cerrar sesión</a>
     </div>
   </nav>

@@ -1,11 +1,12 @@
 body, html{
+    font-family:Arial, Helvetica, sans-serif;
     background-color: black;
-    color: white;
+    color: whitesmoke;
     padding: 0px;
     margin: 0px;
 }
 nav{
-    background-color: #132541;
+    background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,6 +120,19 @@ a{
     text-decoration: none;
 }
 a:hover{
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+nav a{
+    padding: 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    color: #132541;
     border-style: solid;
     border-top: none;
     border-left: none;
