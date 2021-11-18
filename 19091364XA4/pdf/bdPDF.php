@@ -40,7 +40,7 @@ $pdf->Image('../imagenes/logoTECNM1.png' , 140 ,  11 ,   60 ,  21 ,'PNG', '');
 
 
 $pdf->SetFont('Arial','I',11);
-  $dep=cUTF('Instituto tecnologico de zacatepec'); 
+  $dep=cUTF('Instituto Tecnológico de Zacatepec'); 
   $pdf->SetXY(135,38);
   $pdf->Cell(1, 10, $dep);
   $pdf->SetFont('Arial','I',11);

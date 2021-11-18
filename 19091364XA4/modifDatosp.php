@@ -28,7 +28,7 @@ if (isset($_SESSION['usuario'])){
 <nav>
     <div class="Titulos">
     <a href="home.php"><img src="imagenes/logoitzblanco.png" alt=""></a>
-      <h1>Intituto Tecnologico de Zacatepec</h1>
+      <h1>Instituto Tecnológico de Zacatepec</h1>
       <img src="imagenes/LogoTecnmBlanco.png" alt="">
     </div>
     <div class="menu">
