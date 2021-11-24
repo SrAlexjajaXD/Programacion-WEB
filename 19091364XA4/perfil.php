@@ -20,7 +20,7 @@ if (isset($_SESSION['usuario'])){
   try {
       $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
       $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-      $sentencia = $base_de_datos->query("select * from estudiantes, personas where estudiantes.control='$us'");
+      $sentencia = $base_de_datos->query("select * from estudiantes, personas where estudiantes.control='$us' and personas.control='$us'");
       $estudiantes = $sentencia->fetchAll(PDO::FETCH_OBJ);//arreglo de jugadores
       foreach($estudiantes as $est){
 ?>

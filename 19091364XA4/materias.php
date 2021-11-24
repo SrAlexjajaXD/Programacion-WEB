@@ -2,6 +2,7 @@
 <?php
 session_start();
 if (isset($_SESSION['usuario'])){
+  require "pdf/qr/qr.php";
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +43,7 @@ if (isset($_SESSION['usuario'])){
       $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
       $consulMat = $base_de_datos->query("select calificaciones.clave, materias.nombre, calificacion, semestre from calificaciones, materias where control='$us' and calificaciones.clave=materias.clave");
       $materias = $consulMat->fetchAll(PDO::FETCH_OBJ);
-      $consulDat = $base_de_datos->query("select * from estudiantes, personas where personas.control='$us'");
+      $consulDat = $base_de_datos->query("select * from estudiantes, personas where personas.control='$us' and estudiantes.control='$us'");
       $datos = $consulDat->fetchAll(PDO::FETCH_OBJ);
       foreach($datos as $dat){
         echo "<p>Nombre: $dat->nombre</p>";

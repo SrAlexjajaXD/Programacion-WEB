@@ -33,6 +33,15 @@ input{
     background: none;
     color: white;
 }
+select{
+    padding-block: 5px;
+    border-radius: 10px;
+    color: gray;
+    background-color: black;
+    border-color: #132541;
+    border-width: 3px;
+    margin-bottom: 30px;
+}
 button{
     color: whitesmoke;
     background-color: #132541;

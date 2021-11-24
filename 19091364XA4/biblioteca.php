@@ -9,7 +9,7 @@ if (isset($_SESSION['usuario'])){
     try {
         $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
         $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-        $consulBibl = $base_de_datos->query("select id, personas.nombre, titulo, biblioteca.direccion, descripcion from biblioteca, personas");
+        $consulBibl = $base_de_datos->query("select id, personas.nombre, titulo, biblioteca.direccion, descripcion from biblioteca, personas where biblioteca.control=personas.control");
         $biblioteca = $consulBibl->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
