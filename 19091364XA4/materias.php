@@ -11,6 +11,7 @@ if (isset($_SESSION['usuario'])){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/estiloGeneral.css">
+  <script type="text/javascript" src="java/funciones.js" ></script>
   <title>Materias</title>
 </head>
 <body>
@@ -74,7 +75,7 @@ if (isset($_SESSION['usuario'])){
   ?>
   <div class="pdf">
     <form action="pdf/bdPDF.php" method="POST">
-      <p>Crear documento PDF del <select name="semestre">
+      <p>Crear documento PDF del <select name="semestre" onchange="crearqr();">
         <option value="1">1er</option>
         <option value="2">2do</option>
         <option value="3">3er</option>
@@ -86,6 +87,7 @@ if (isset($_SESSION['usuario'])){
         <option value="9">9no</option>
   </select>
          semestre</p>
+         
       <button type="submit">Crear documento PDF</button>
     </form>
   </div>
