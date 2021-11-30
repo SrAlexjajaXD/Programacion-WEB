@@ -1,0 +1,62 @@
+body,html{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    padding: 0px;
+    margin: 0px;
+}
+#cabeza h1{
+    margin: 0px;
+}
+#cabeza{
+    background-color: #232325;
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+#cuerpo{
+    display: flex;
+    gap: 10px;
+}
+#album{
+    border-radius: 7px;
+    padding: 20px;
+    background-color: #232325;
+    text-align: center;
+    margin: 5px;
+    width: 250px;
+    gap: 10px;
+    height: auto;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+h5{
+    margin: 0px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+#album h1{
+    margin: 0px;
+}
+h3{
+    margin: 0px;
+    font-size: 12px;
+}
+h4{
+    margin: 0px;
+    font-size: 10px;
+}
+p{
+    margin: 0px;
+    margin-top: 20px;
+    text-align: left;
+    text-align: justify;
+}
+img{
+    width: 245px;;
+}
