@@ -1,5 +1,3 @@
-
-
 function crear(padre, id, artista, nombre, ano, descripcion, enlace, foto) {
     let contenedor=document.createElement("div");
     let info=document.createElement("section");
@@ -50,8 +48,7 @@ function crear(padre, id, artista, nombre, ano, descripcion, enlace, foto) {
 }
 
 
-fetch("http://localhost/html/19091364XA5/consultar.php").then(respuesta=>respuesta.json()).then(datos=>datos.forEach(elemento => crear(cuerpo,
-elemento.id,elemento.artista,elemento.nombre,elemento.ano,elemento.descripcion,elemento.link,elemento.imagen)));
+fetch("http://localhost/Programacion-WEB-main/19091364XA5/consultar.php").then(respuesta=>respuesta.json()).then(datos=>datos.forEach(elemento => crear(cuerpo,elemento.id,elemento.artista,elemento.nombre,elemento.ano,elemento.descripcion,elemento.link,elemento.imagen)));
 
 
 
