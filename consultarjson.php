@@ -9,7 +9,7 @@ $puerto = "5432";//si fuera MySQL el puerto seria 3306
 try {
     $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
     $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-    $sentencia = $base_de_datos->query("select * from jugadores");
+    $sentencia = $base_de_datos->query("select * from albumes");
     $jugadores = $sentencia->fetchAll(PDO::FETCH_OBJ);//arreglo de jugadores
     echo json_encode($jugadores);//conseguir extension jsonlite para chrome
 } catch (Exception $e) {

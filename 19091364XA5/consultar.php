@@ -1,4 +1,9 @@
 <?php
+
+function cUTF($cadena){
+    return iconv("utf-8", "ISO-8859-1", $cadena);
+}
+
 $pass = "lkpoaszxm2001";
 $usuario = "sharky";
 $nombreBaseDeDatos = "newbase";
