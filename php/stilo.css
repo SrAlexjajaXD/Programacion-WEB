@@ -1,0 +1,30 @@
+html{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+form{
+    margin-top: 90px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+}
+input{
+    text-align: center;
+    padding: 7px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+}
+button{
+    text-align: center;
+    padding: 7px;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 5px;
+}
+th, td,tr{
+    text-align: center;
+    width: 90px;
+    border-style: solid;
+}

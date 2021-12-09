@@ -14,7 +14,6 @@ function cUTF($cadena){
 $pass = "lkpoaszxm2001";
 $usuario = "sharky";
 $nombreBaseDeDatos = "tec";
-# Puede ser 127.0.0.1 o el nombre de tu equipo; o la IP de un servidor remoto
 $rutaServidor = "127.0.0.1";
 $puerto = "5432";
 
@@ -23,7 +22,8 @@ $us=$_SESSION['usuario'];
 try {
   $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
   $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $sentencia = $base_de_datos->query("select calificaciones.clave, materias.nombre, semestre, calificacion from calificaciones, materias where control='$us' and calificaciones.clave=materias.clave and semestre='$sem'");
+  $sentencia = $base_de_datos->query("select calificaciones.clave, materias.nombre, semestre, calificacion 
+  from calificaciones, materias where control='$us' and calificaciones.clave=materias.clave and semestre='$sem'");
   $materias = $sentencia->fetchAll(PDO::FETCH_OBJ);
   $consulDat = $base_de_datos->query("select * from estudiantes, personas where personas.control='$us' and estudiantes.control='$us'");
   $datos = $consulDat->fetchAll(PDO::FETCH_OBJ);
@@ -35,16 +35,10 @@ try {
   // Orientación (P)ortrait=vertical (L)andscape=apaisado
   // Unidades en milímetros (mm)
   $pdf = new PDF('P','mm','Letter');
-  
   $pdf->AddPage();
-
-$pdf->SetFont('Arial','B',16);
-
-$anchoPag=$pdf->GetPageWidth();  // Width of Current Page
-$altoPag=$pdf->GetPageHeight(); // Height of Current Page
-
-
-
+  $pdf->SetFont('Arial','B',16);
+  $anchoPag=$pdf->GetPageWidth();
+  $altoPag=$pdf->GetPageHeight(); 
 
   $pdf->Image('../imagenes/logEdu.png' , 5 ,  0 ,   80 ,  42 ,'PNG', '');
   $pdf->Image('../imagenes/logoTECNM1.png' , 140 ,  11 ,   60 ,  21 ,'PNG', '');
@@ -62,8 +56,7 @@ $altoPag=$pdf->GetPageHeight(); // Height of Current Page
   $titulo1='Boleta de calificaciones';
   $tam1=$pdf->GetStringWidth($titulo1);
   $pdf->SetXY(($anchoPag-$tam1)/2,55);
-  $pdf->Cell($tam1, 10, $titulo1); // centrando texto
-  
+  $pdf->Cell($tam1, 10, $titulo1); 
   
   foreach($datos as $dat){
     $pdf->SetFont('Arial','I',13);
@@ -91,16 +84,9 @@ $altoPag=$pdf->GetPageHeight(); // Height of Current Page
     $pdf->SetXY(10,91);
     $pdf->Cell(1, 10, $esp);
   }
-  
-  //**************************
-  
-  //*************************
   $pdf->Image('../imagenes/piepdf.jpg' , 7 ,  235 ,   200 ,  40 ,'JPG', '');
-  
-  
   // Define las cadenas de las cabeceras
   $miCabecera = array('Clave','Nombre','Semestre','Calificación');
-  
   // Genera una tabla con cabecera y renglones (color de renglón alternado)
   $pdf->tablaHorizontal($miCabecera,        // cadenas para cabecera
   $materias,         // resultado de la consulta
