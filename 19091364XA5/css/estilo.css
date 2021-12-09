@@ -17,8 +17,9 @@ body,html{
     margin-bottom: 10px;
 }
 #cuerpo{
-    padding-inline: 10px;
+    padding-inline: 45px;
     display: flex;
+    flex-flow: row wrap;
     gap: 10px;
 }
 #album{

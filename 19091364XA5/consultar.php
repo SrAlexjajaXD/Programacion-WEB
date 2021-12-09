@@ -12,8 +12,8 @@ $rutaServidor = "127.0.0.1";
 $puerto = "5432";//si fuera MySQL el puerto seria 3306
 try {
     $base_de_datos = new PDO("pgsql:host=$rutaServidor;port=$puerto;dbname=$nombreBaseDeDatos", $usuario, $pass);
-    $base_de_datos->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
-    $sentencia = $base_de_datos->query("select * from albumes");
+    $base_de_datos -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);//para capturar errores
+    $sentencia = $base_de_datos->query("select * from albumes order by id");
     $jugadores = $sentencia->fetchAll(PDO::FETCH_OBJ);//arreglo de jugadores
     echo json_encode($jugadores);//conseguir extension jsonlite para chrome
 } catch (Exception $e) {
